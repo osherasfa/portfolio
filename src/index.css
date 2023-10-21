@@ -1,13 +1,84 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #212121;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  background-image: url(./assets/background.svg);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  padding: 3.38rem 4.3rem;
+}
+
+h1, h3, h5, p, button{ 
+  font-weight: inherit;
+  margin: 0;
+ }
+
+ a {
+  color: inherit;
+  text-decoration: none;
+ }
+
+nav, .menu{
+  display: flex;
+  align-items: center;
+  gap: 3.86rem;
+}
+
+nav h1{ font-size: 2rem; }
+nav a { margin-right: auto; }
+
+.menu img { width: 1.875rem; }
+.CV {
+  background: #557AFF;
+  padding: .35rem 2.55rem;
+  font-size: 1.5rem;
+}
+
+main{
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.intro{
+  font-size: 4.3125rem;
+  margin-top: 13.56rem;
+}
+
+.title{
+  color: transparent; 
+  background-clip: text; 
+  background-image: linear-gradient(to right, #821bff, #557AFF);
+}
+
+section{
+  font-size: 1.8125rem;
+  text-align: center;
+  max-width: 100rem;
+  margin: 6.25rem auto;
+}
+
+section h5 {
+  margin-bottom: 4.12rem;
+}
+
+.showcase{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* overflow: scroll; */
+}
+
+.showcase img{
+  width: 37.5rem;
+  height: 16rem;
+  object-fit: cover;
+}
+
+footer{
+  text-align: center;
+  margin: 0 auto;
+  width: fit-content;
 }
