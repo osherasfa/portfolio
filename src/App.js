@@ -1,6 +1,3 @@
-import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
 import githubLogo from "./assets/github.png"
 import linkedinLogo from "./assets/linkedin.png"
 import projectOne from "./assets/project1.jpg"
@@ -8,15 +5,6 @@ import projectTwo from "./assets/project2.jpg"
 import TypeAnimation from "./components/TypeAnimation"
 
 export default function App() {
-    const particlesInit = useCallback(async engine => {
-      console.log(engine);
-      await loadSlim(engine);
-  }, [])
-
-  const particlesLoaded = useCallback(async container => {
-      await console.log(container);
-  }, [])
-
 
   return (
     <div className="App">
@@ -29,10 +17,10 @@ export default function App() {
         </div>
       </nav>
       <main>
-        <h1 className="intro">Hello, I am Osher :) <br/> A&nbsp;
-          <TypeAnimation 
+        <h1 className="intro">Hello, I am Osher :) <br/>
+        A <TypeAnimation 
           words={["Frontend", "Backend", "Fullstack", "Web"]} 
-          time={1000}
+          time={2000}
           after={"developer"}/>
         </h1>
         <section id="aboutme">
@@ -60,7 +48,6 @@ export default function App() {
       <footer>
         <h3>COPYRIGHT © 2023 OsherDev <br/> All Rights Reserved</h3>
       </footer>
-      <Particles id="tsparticles" url="http://foo.bar/particles.json" init={particlesInit} loaded={particlesLoaded} />
     </div>
   );
 }
