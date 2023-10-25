@@ -1,3 +1,4 @@
+import React from "react"
 import githubLogo from "./assets/github.png"
 import linkedinLogo from "./assets/linkedin.png"
 import projectOne from "./assets/project1.jpg"
@@ -5,7 +6,6 @@ import projectTwo from "./assets/project2.jpg"
 import TypeAnimation from "./components/TypeAnimation"
 
 export default function App() {
-
   return (
     <div className="App">
       <nav>

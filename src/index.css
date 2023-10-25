@@ -46,11 +46,36 @@ main{
   margin-top: 13.56rem;
 }
 
-.title{
+.title, .animation{
   color: transparent; 
   background-clip: text; 
   background-image: linear-gradient(to right, #821bff, #557AFF);
   font-weight: 900;
+}
+
+.title > div{
+  display: inline-block;
+  background-color: #161616;
+  padding: 0 3rem 0 1rem;
+}
+
+.animation{ 
+  position: relative;
+  /* margin-right: 2rem; */
+ }
+.animation::after{
+  position: absolute;
+  color: white;
+  content: '▬';
+  overflow: hidden;
+  width: 2.3rem;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
 
 section{
