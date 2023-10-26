@@ -94,7 +94,6 @@ section h5 { margin-bottom: 1rem; }
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-evenly;
-  overflow: scroll;
 }
 
 .showcase img{

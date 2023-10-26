@@ -25,7 +25,7 @@ function TypeAnimation({ words, time, after }) {
       }
     }
     toggleWords()
-  }, [])
+  }, [time, words])
 
   return (
     <span className='title'>
