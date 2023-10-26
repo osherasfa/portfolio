@@ -1,4 +1,4 @@
-body {
+body{
   margin: 0;
   background-color: #212121;
   color: white;
@@ -6,44 +6,50 @@ body {
   font-weight: 500;
 }
 
-.App{
-  padding: 3.38rem 4.3rem;
+main, footer{
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 h1, h3, h5, p, button{ 
+  font-size: inherit;
   font-weight: inherit;
   margin: 0;
  }
 
  a {
+  display: flex;
   color: inherit;
   text-decoration: none;
  }
 
-nav, .menu{
+.App{ padding-inline: 1.5rem; }
+
+/*--------- Nav ---------*/
+nav{
   display: flex;
   align-items: center;
-  gap: 3.86rem;
+  margin-top: 2rem;
 }
 
-nav h1{ font-size: 2rem; }
-nav a { margin-right: auto; }
-
-.menu img { width: 1.875rem; }
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+.menu img { width: 1em; }
 .CV {
+  display: inline-block;
   background: #557AFF;
-  padding: .35rem 2.55rem;
-  font-size: 1.5rem;
+  padding: .23em 1.7em; 
+  font-size: .8em; 
 }
 
-main{
-  max-width: 2000px;
-  margin: 0 auto;
-}
-
+/*--------- Hero ---------*/
 .intro{
-  font-size: 4.3125rem;
-  margin-top: 13.56rem;
+  font-size: 2.5rem;
+  margin-top: 2rem;
 }
 
 .title, .animation{
@@ -55,20 +61,18 @@ main{
 
 .title > div{
   display: inline-block;
+  width: 13rem;
   background-color: #161616;
-  padding: 0 3rem 0 1rem;
+  padding-inline: .7rem;
 }
 
-.animation{ 
-  position: relative;
-  /* margin-right: 2rem; */
- }
 .animation::after{
-  position: absolute;
-  color: white;
-  content: '▬';
-  overflow: hidden;
-  width: 2.3rem;
+  display: inline-block;
+  content:' ';
+  width: 1.5rem;
+  height: .5rem;
+  background-color: white;
+  margin-left: .5rem;
   animation: blink 1s step-end infinite;
 }
 
@@ -78,27 +82,24 @@ main{
   100% { opacity: 1.0; }
 }
 
+/*--------- Section ---------*/
 section{
-  font-size: 1.8125rem;
   text-align: center;
-  max-width: 100rem;
-  margin: 6.25rem auto;
+  margin: 3rem auto;
 }
-
-section h5 {
-  margin-bottom: 4.12rem;
-}
+section h5 { margin-bottom: 1rem; }
 
 .showcase{
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
   justify-content: space-evenly;
-  /* overflow: scroll; */
+  overflow: scroll;
 }
 
 .showcase img{
-  width: 37.5rem;
-  height: 16rem;
+  width: 19rem;
+  aspect-ratio: 2.39/1;
   object-fit: cover;
 }
 
@@ -106,4 +107,38 @@ footer{
   text-align: center;
   margin: 0 auto;
   width: fit-content;
+}
+
+
+@media (min-width: 768px) {
+  .App{ padding-inline: 4.3rem; }
+
+/*--------- Nav ---------*/
+  nav{
+    margin-top: 3.38rem;
+    font-size: 2rem;
+  }
+  .menu{ gap: 3.86rem; }
+
+/*--------- Hero ---------*/
+  .intro{
+    font-size: 4.3125rem;
+    margin-top: 5rem;
+  }
+  .title > div{ 
+    padding-inline: 1rem;
+    width: 22rem;
+  }
+  .animation::after{
+    width: 2.3rem;
+    height: .8rem;
+  }
+
+/*--------- Section ---------*/
+section{
+  font-size: 1.8125rem;
+  margin: 6.25rem auto;
+}
+.showcase img{ width: 37.5rem; }
+section h5 { margin-bottom: 4.12rem; }
 }

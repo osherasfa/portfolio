@@ -1,7 +1,7 @@
 import React from "react"
 
 function TypeAnimation({ words, time, after }) {
-  const [ currWord, setCurrWord ] = React.useState('Frontend')
+  const [ currWord, setCurrWord ] = React.useState('')
 
   React.useEffect(() => {
     const toggleAnimation = (word, isRewind, counter) => {

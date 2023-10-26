@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="App">
       <nav>
-        <a href="."><h1>Osher.Dev</h1></a>
+        <a href="." className="logo"><h1>Osher.Dev</h1></a>
         <div className="menu">
           <a href="https://github.com/osherasfa" target="_blank" rel="noreferrer"><img src={githubLogo} alt="github" /></a>
           <a href="https://www.linkedin.com/in/osher-asefa-b919b020b/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="linkedin" /></a>
