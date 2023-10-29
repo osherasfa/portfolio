@@ -1,8 +1,6 @@
 import React from "react"
 import githubLogo from "./assets/github.png"
 import linkedinLogo from "./assets/linkedin.png"
-import projectOne from "./assets/project1.jpg"
-import projectTwo from "./assets/project2.jpg"
 import TypeAnimation from "./components/TypeAnimation"
 
 export default function App() {
@@ -30,8 +28,9 @@ export default function App() {
         <section id="projects">
           <h5>- Projects -</h5>
           <div className="showcase">
-            <img src={projectOne} alt="projectOne"/>
-            <img src={projectTwo} alt="projectTwo"/>
+            <div className="project">
+              <h1>TicTacToe</h1>
+            </div>
           </div>
         </section>
         <section id="skills">
