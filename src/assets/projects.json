@@ -1,0 +1,22 @@
+{
+  "tictactoe": 
+  {
+    "snapshot": "tictactoe.png",
+    "description": "Tic-Tac-Toe game with 4x4/3x3 grid. You can play on local or bot. Customizable theme. BG music. Plenty of modes and features.",
+    "technologies": ["react", "html", "css", "js"],
+    "link": "https://github.com/osherasfa/tictactoe"
+  },
+  "blog": 
+  {
+    "snapshot": "blog.png",
+    "description": "Simple blog site with imported posts from data object. Dark/light mode, and interactive posts, implemented as a single-page application (SPA).",
+    "technologies": ["html", "css", "js"],
+    "link": "https://github.com/osherasfa/blog-journey"
+  },
+  "portfolio": {
+    "snapshot": "portfolio.png",
+    "description": "Portfolio Portfolio Portfolio Portfolio",
+    "technologies": ["react", "html", "css", "js"],
+    "link": "https://github.com/osherasfa/portfolio"
+  }
+}

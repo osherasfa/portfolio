@@ -2,8 +2,10 @@ import React from "react"
 import githubLogo from "./assets/github.png"
 import linkedinLogo from "./assets/linkedin.png"
 import TypeAnimation from "./components/TypeAnimation"
+import Projects from "./assets/projects.json"
 
 export default function App() {
+  const techThemeMap = { 'react': 'cyan black', 'html': 'orange', 'css': 'blue', 'js': 'yellow black' }
   return (
     <div className="App">
       <nav>
@@ -27,10 +29,21 @@ export default function App() {
         </section>
         <section id="projects">
           <h5>- Projects -</h5>
-          <div className="showcase">
-            <div className="project">
-              <h1>TicTacToe</h1>
-            </div>
+          <div className="projects-container">
+            {Object.values(Projects).map((item, index) => {
+              const projectImage = require(`./assets/${item.snapshot}`)
+              return(
+                <a href={item.link} target="_blank" rel="noreferrer" key={index} className="project">
+                  <img src={projectImage} alt="project snapshot"/>
+                  <div>
+                    <p>{item.description}</p>
+                    <div className="filters">
+                      {item.technologies.map((tech, index) => <span key={index} className={`${techThemeMap[tech]}`}>{tech}</span>)}
+                    </div>
+                  </div>
+                </a>
+              )
+            })}
           </div>
         </section>
         <section id="skills">

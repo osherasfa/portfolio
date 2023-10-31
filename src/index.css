@@ -88,44 +88,47 @@ section{
   margin: 3rem auto;
 }
 section h5 { margin-bottom: 1rem; }
+.projects-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.project{
+  display: initial;
+  background-color: #161616;
+  filter: drop-shadow(0 0 1rem #161616);
+  max-width: 30rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.project img { width: 100%; }
+.project > div{ padding: 1em; }
+.project div p { margin-bottom: 2rem; }
 
-.showcase{
+.filters{
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-evenly;
+}
+.filters span{
+  font-size: .7rem;
+  padding: .2em .7em;
+  border-radius: 1rem;
+  margin: .3em;
 }
 
-/* .showcase img{
-  width: 19rem;
-  aspect-ratio: 2.39/1;
-  object-fit: cover;
-} */
-
-.project{
-  display: flex;
-  align-items: flex-end;
-  background-image: url(./assets/tictactoe.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 19rem;
-  aspect-ratio: 2.39/1;
-}
-
-.project h1{
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  font-size: 3rem;
-  text-align: right;
-  padding: 1rem;
-}
+.black{ color: #161616; }
+.blue{ background-color: #306af1; }
+.yellow { background-color: #f7e025; }
+.cyan { background-color: #5ed3f3; }
+.orange { background-color: #f16a30; }
 
 footer{
   text-align: center;
   margin: 0 auto;
   width: fit-content;
+  margin-bottom: 2rem;
 }
-
 
 @media (min-width: 768px) {
   .App{ padding-inline: 4.3rem; }
@@ -156,6 +159,7 @@ section{
   font-size: 1.8125rem;
   margin: 6.25rem auto;
 }
-.project{ width: 37.5rem; }
+.project{ min-height: 38.5rem; }
+.filters span{ font-size: 1rem; }
 section h5 { margin-bottom: 4.12rem; }
 }
