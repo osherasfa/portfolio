@@ -4,19 +4,50 @@
     "snapshot": "tictactoe.png",
     "description": "Tic-Tac-Toe game with 4x4/3x3 grid. You can play on local or bot. Customizable theme. BG music. Plenty of modes and features.",
     "technologies": ["react", "html", "css", "js"],
-    "link": "https://github.com/osherasfa/tictactoe"
+    "github": "https://github.com/osherasfa/tictactoe",
+    "live": "https://tictactoe8bit.netlify.app/"
   },
   "blog": 
   {
     "snapshot": "blog.png",
     "description": "Simple blog site with imported posts from data object. Dark/light mode, and interactive posts, implemented as a single-page application (SPA).",
     "technologies": ["html", "css", "js"],
-    "link": "https://github.com/osherasfa/blog-journey"
+    "github": "https://github.com/osherasfa/blog-journey",
+    "live": "https://blogjourney.netlify.app/"
+  },
+  "wearethechampion": {
+    "snapshot": "wearethechampions.png",
+    "description": "This project showcases a simple web application that allows users to write and publish endorsements. Website with interactive user interface.",
+    "technologies": ["react", "html", "css", "js", "firebase"],
+    "github": "https://github.com/osherasfa/endorsement-wall",
+    "live": "https://endorsement-project.netlify.app/"
+  },
+  "restaurant": {
+    "snapshot": "restaurant.png",
+    "description": "simple restaurant order system that allows users to view a menu, add items to their order, and complete the payment process.",
+    "technologies": ["react", "html", "css", "js"],
+    "github": "https://github.com/osherasfa/restaurant-ordering",
+    "live": "https://restaurant-ordering-site.netlify.app/"
+  },
+  "quizzical": {
+    "snapshot": "quizzical.png",
+    "description": "Test Of Knowledge",
+    "technologies": ["react", "html", "css", "js"],
+    "github": "https://github.com/osherasfa/quizzical",
+    "live": "https://quizzical-site.netlify.app/"
+  },
+  "tenzies": {
+    "snapshot": "tenzies.png",
+    "description": "Roll until all dice are the same. Click each die to freeze it at its current value between rolls.",
+    "technologies": ["react", "html", "css", "js"],
+    "github": "https://github.com/osherasfa/dice-game",
+    "live": "https://osherasfa.github.io/dice-game/"
   },
   "portfolio": {
     "snapshot": "portfolio.png",
-    "description": "Portfolio Portfolio Portfolio Portfolio",
+    "description": "Portfolio website to showcase projects and to tell about myself :)",
     "technologies": ["react", "html", "css", "js"],
-    "link": "https://github.com/osherasfa/portfolio"
+    "github": "https://github.com/osherasfa/portfolio",
+    "live": "https://osherdev.netlify.app/"
   }
 }

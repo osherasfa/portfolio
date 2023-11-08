@@ -2,6 +2,7 @@ import React from "react"
 import githubLogo from "./assets/github.png"
 import linkedinLogo from "./assets/linkedin.png"
 import TypeAnimation from "./components/TypeAnimation"
+import openInNewTabIcon from "./assets/up-right-from-square-solid.svg"
 import Projects from "./assets/projects.json"
 
 export default function App() {
@@ -33,15 +34,19 @@ export default function App() {
             {Object.values(Projects).map((item, index) => {
               const projectImage = require(`./assets/${item.snapshot}`)
               return(
-                <a href={item.link} target="_blank" rel="noreferrer" key={index} className="project">
+                <div className="project">
                   <img src={projectImage} alt="project snapshot"/>
                   <div>
                     <p>{item.description}</p>
                     <div className="filters">
                       {item.technologies.map((tech, index) => <span key={index} className={`${techThemeMap[tech]}`}>{tech}</span>)}
                     </div>
+                    <div className="project_links">
+                      <a href={item.github} target="_blank" rel="noreferrer" className="project_btn">Git <img src={openInNewTabIcon} alt="newTabIcon" /></a>
+                      <a href={item.live} target="_blank" rel="noreferrer" className="project_btn">Live <img src={openInNewTabIcon} alt="newTabIcon" /></a>
+                    </div>
                   </div>
-                </a>
+                </div>
               )
             })}
           </div>

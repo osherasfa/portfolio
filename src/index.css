@@ -95,11 +95,10 @@ section h5 { margin-bottom: 1rem; }
   gap: 3rem;
 }
 .project{
-  display: initial;
   background-color: #161616;
   filter: drop-shadow(0 0 1rem #161616);
   max-width: 30rem;
-  cursor: pointer;
+  user-select: none;
   box-sizing: border-box;
 }
 .project img { width: 100%; }
@@ -109,12 +108,34 @@ section h5 { margin-bottom: 1rem; }
 .filters{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .filters span{
   font-size: .7rem;
   padding: .2em .7em;
   border-radius: 1rem;
   margin: .3em;
+}
+
+.project_links{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-block: 3rem;
+}
+
+.project_btn{
+  color: white;
+  background-color: #557AFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 1em;
+}
+
+.project_btn img {
+  height: 1rem;
+  margin-left: .5rem;
 }
 
 .black{ color: #161616; }
