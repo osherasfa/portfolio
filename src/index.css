@@ -138,6 +138,46 @@ section h5 { margin-bottom: 1rem; }
   margin-left: .5rem;
 }
 
+.scroller{
+  margin: 0 auto;
+
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller__inner{
+  padding-block: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+          animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+@-webkit-keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
 .black{ color: #161616; }
 .blue{ background-color: #306af1; }
 .yellow { background-color: #f7e025; }
@@ -176,11 +216,15 @@ footer{
   }
 
 /*--------- Section ---------*/
-section{
-  font-size: 1.8125rem;
-  margin: 6.25rem auto;
-}
-.project{ min-height: 38.5rem; }
-.filters span{ font-size: 1rem; }
-section h5 { margin-bottom: 4.12rem; }
+  section{
+    font-size: 1.8125rem;
+    margin: 6.25rem auto;
+  }
+  .project{ min-height: 38.5rem; }
+  .filters span{ font-size: 1rem; }
+  section h5 { margin-bottom: 4.12rem; }
+
+  .scroller__inner{ gap: 5rem; }
+  .scroller__inner img { width: 7rem; }
+
 }

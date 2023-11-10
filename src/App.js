@@ -1,12 +1,49 @@
 import React from "react"
+import TypeAnimation from "./components/TypeAnimation"
+import Projects from "./assets/projects.json"
+
+
 import githubLogo from "./assets/github.png"
 import linkedinLogo from "./assets/linkedin.png"
-import TypeAnimation from "./components/TypeAnimation"
 import openInNewTabIcon from "./assets/up-right-from-square-solid.svg"
-import Projects from "./assets/projects.json"
+import cssIcon from "./assets/logos/CSS.svg"
+import gitIcon from "./assets/logos/Git.svg"
+import htmlIcon from "./assets/logos/HTML.svg"
+import jsIcon from "./assets/logos/JavaScript.svg"
+import pythonIcon from "./assets/logos/Python.svg"
+import reactIcon from "./assets/logos/React.svg"
+import figmaIcon from "./assets/logos/figma.svg"
+import twIcon from "./assets/logos/tailwind.svg"
+
 
 export default function App() {
   const techThemeMap = { 'react': 'cyan black', 'html': 'orange', 'css': 'blue', 'js': 'yellow black' }
+
+
+  React.useEffect(() => {
+    function addAnimation() {
+      document.querySelectorAll(".scroller").forEach((scroller) => {
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+    
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+      addAnimation();
+
+  }, []);
+
+
   return (
     <div className="App">
       <nav>
@@ -53,12 +90,17 @@ export default function App() {
         </section>
         <section id="skills">
           <h5>- Skills -</h5>
-          <div>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+          <div className="scroller">
+            <div className="scroller__inner">
+              <img src={cssIcon} alt="" />
+              <img src={gitIcon} alt="" />
+              <img src={htmlIcon} alt="" />
+              <img src={jsIcon} alt="" />
+              <img src={pythonIcon} alt="" />
+              <img src={reactIcon} alt="" />
+              <img src={figmaIcon} alt="" />
+              <img src={twIcon} alt="" />
+            </div>
           </div>
         </section>
       </main>
